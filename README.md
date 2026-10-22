@@ -5,7 +5,7 @@
 每个插件一行：它的名字、版本、作者自己写的一句作用，自带的还是第三方，
 带搜索框——装到三十几个以后靠翻是翻不完的。
 
-![panel](https://raw.githubusercontent.com/7gzgn/dsh-my-plugins/main/docs/panel.png)
+![面板](docs/panel.png)
 
 ## 为什么会有这个东西
 
