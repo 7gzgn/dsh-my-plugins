@@ -1,0 +1,4 @@
+# dsh-my-plugins bundle patch: 把插件行插进 profile 名单。
+- insert:
+    - id: plugin-my-plugins
+      name: 'dsh-my-plugins'
