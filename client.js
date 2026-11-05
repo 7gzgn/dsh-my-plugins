@@ -88,6 +88,9 @@ window.__ModuleLoader__.load({
         background: 'rgba(255,255,255,0.06)',
         color: '#7a7a88',
       },
+      usedTag: { fontSize: 10, color: '#5ad07a', flex: '0 0 auto' },
+      idleTag: { fontSize: 10, color: '#8a8a98', flex: '0 0 auto' },
+      uiTag: { fontSize: 10, color: '#6f7480', flex: '0 0 auto' },
       desc: { color: '#9aa0ac', fontSize: 11, marginTop: 3, lineHeight: 1.45, wordBreak: 'break-word' },
       btn: {
         height: 22,
@@ -167,6 +170,11 @@ window.__ModuleLoader__.load({
             h('span', { style: css.title }, p.title || p.id),
             p.version ? h('span', { style: css.ver }, 'v' + p.version) : null,
             h('span', { style: p.official ? css.tag : { ...css.tag, ...css.tagMine } }, p.official ? '自带' : '第三方'),
+          p.toolCount > 0
+            ? p.used
+              ? h('span', { style: css.usedTag }, `用过 ${p.calls} 次`)
+              : h('span', { style: css.idleTag }, '没用过')
+            : h('span', { style: css.uiTag }, '纯界面'),
           ),
           p.title && p.title !== p.id ? h('div', { style: { ...css.desc, color: '#6f7480' } }, p.id) : null,
           p.desc
@@ -186,7 +194,7 @@ window.__ModuleLoader__.load({
         h(
           'div',
           { style: css.head },
-          h('div', { style: { flex: '0 0 auto' } }, data ? `${data.total} 个 · 第三方 ${data.thirdParty}` : '读取中…'),
+          h('div', { style: { flex: '0 0 auto' } }, data ? `${data.total} 个 · ${data.idleCount ?? data.unusedCount ?? 0} 个没调用过工具` : '读取中…'),
           h('input', {
             style: css.input,
             value: q,
