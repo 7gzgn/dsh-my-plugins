@@ -1,6 +1,6 @@
 {
   "name": "dsh-my-plugins",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "「我装的插件」：顶栏一颗药丸告诉你这个 DSH 到底加载了多少插件，点开是可搜索的清单——每个插件的名字、版本、作者自己写的一句作用，自带和第三方分开标。只读、零配置。 See what you actually installed: how many plugins your profile loads, each with its version and the author's own one-liner, searchable.",
   "type": "module",
   "main": "lib/index.js",
@@ -37,7 +37,8 @@
     "compatibility": {
       "dshReleases": {
         "0.2.0-rc.2": "compatible",
-        "0.2.1-rc.2": "compatible"
+        "0.2.1-rc.2": "compatible",
+        "0.2.2-rc.1": "compatible"
       }
     },
     "bundle": {
